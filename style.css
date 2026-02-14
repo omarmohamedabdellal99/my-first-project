@@ -1,0 +1,143 @@
+img{
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 50px;
+}
+
+.one{
+    display: flex;
+align-items: center;
+    flex-direction: column;
+}
+.two{
+    display: flex;
+  flex-direction: column;
+    align-items: center;
+}
+.three{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+.facebook , .github , .linkden , .portfilio , .instgram{
+flex:0 0 30%;
+height: 60px;
+height: 60px;
+border-radius: 30px;
+border: 2px solid black;
+box-shadow: 0 4px 15px rgba(0, 0, 0, 0.6);
+opacity: 0.9;
+backdrop-filter: blur(5px); 
+background-size: 300% 300%;
+background-position: left;
+    
+} 
+.facebook{
+ background: linear-gradient(to bottom, #1877f2, #0e52a5);
+    color: white;
+;
+}
+.github{
+background: linear-gradient(to bottom, #444d56, #24292e);
+    color: white;
+}
+.linkden{
+background: linear-gradient(to right, #0077b5, #00a0dc);
+    color: white;
+}
+.portfilio{
+background: linear-gradient(45deg, #11998e, #38ef7d);
+    color: white;
+}
+.instgram{
+   background: linear-gradient(45deg, #405de6, #5851db, #833ab4, #c13584, #e1306c, #fd1d1d, #f56040, #f77737, #fcaf45, #ffdc80);
+    color: white;
+     transition: all 1s ease;
+}
+body {
+    /* 1. ألوان كتير متوزعة صح عشان التداخل يكون ناعم */
+    background: linear-gradient(-45deg, #1877f2, #bc1888, #2c3e50, #000000, #405de6, #e1306c);
+    
+    /* 2. حجم الخلفية (عشان ندي مساحة للحركة) */
+    background-size: 400% 400%;
+    
+    /* 3. الربط بالأنيميشن (15 ثانية عشان تكون هادية) */
+    animation: superGradient 15s ease infinite;
+
+    min-height: 100vh;
+    margin: 0;
+    color: white;
+    font-family: sans-serif; /* عشان الخط يكون أنضف */
+}
+
+/* 4. كود الحركة (تحريك مكان الرؤية فقط) */
+@keyframes superGradient {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+h2 {
+    font-size: 40px;
+    background: linear-gradient(to right, #1877f2, #bc1888);
+    -webkit-background-clip: text; /* النسخة القديمة */
+    background-clip: text;         /* دي النسخة الأساسية اللي ناقصة عندك */
+    -webkit-text-fill-color: transparent;
+}
+.fa-solid.fa-code {
+    font-size: 150px;
+    /* 1. حط الـ Gradient اللي أنت عايزه كخلفية */
+    background: linear-gradient(45deg, #f09433, #e6683c, #dc2743, #cc2366, #bc1888);
+    
+    /* 2. الخدعة هنا: بنقول للمتصفح قص الخلفية على شكل النص (الأيقونة) */
+    -webkit-background-clip: text;
+    background-clip: text;
+
+    /* 3. بنخلي لون الأيقونة الأصلي شفاف عشان الـ Gradient اللي تحتها يبان */
+    -webkit-text-fill-color: transparent;
+    
+    display: block;
+    margin: 0 auto 20px;
+    text-align: center;
+}
+h1 {
+    font-size: 40px;
+    background: linear-gradient(to right, #1877f2, #bc1888);
+    -webkit-background-clip: text; /* النسخة القديمة */
+    background-clip: text;         /* دي النسخة الأساسية اللي ناقصة عندك */
+    -webkit-text-fill-color: transparent;
+}
+.facebook:hover {
+    /* background: linear-gradient(to bottom, #0e52a5, #1877f2); */
+     
+    color: rgb(93, 5, 5);
+    transition: 1s;
+transform: scale(1.1);
+}
+.github:hover {
+    background: linear-gradient(to bottom, #24292e, #444d56);
+    color: rgb(93, 5, 5);
+    transform: scale(1.1);
+    transition: 1s; }
+.linkden:hover {
+    background: linear-gradient(to right, #00a0dc, #0077b5);
+    color: rgb(93, 5, 5);
+    transform: scale(1.1);
+    transition: 1s; }
+.portfilio:hover {
+    background: linear-gradient(45deg, #38ef7d, #11998e);
+    color: rgb(93, 5, 5);
+    transform: scale(1.1);
+    transition: 1s; }
+.instgram:hover {
+background-position: right;
+     transform: scale(1.1);
+
+     }
